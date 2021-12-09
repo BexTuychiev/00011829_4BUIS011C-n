@@ -14,19 +14,19 @@
     <!--Sidebar-->
     <nav class="sidebar bar-block white animate-left text-grey collapse top center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
         <h3 class="padding-64 center"><b>Bex<br>Tuychiev</b></h3>
-        <a href="javascript:void(0)" onclick="close()" class="bar-item button padding hide-large">CLOSE</a>
-        <a href="home.html" onclick="close()" class="bar-item button">ARTICLES</a>
-        <a href="about.html" onclick="close()" class="bar-item button">ABOUT ME</a>
-        <a href="contact.html" onclick="close()" class="bar-item button">CONTACT</a>
-        <a href="#" onclick="close()" class="bar-item button">SKILLS</a>
-        <a href="pricing.html" onclick="close()" class="bar-item button">PRICING</a>
-        <a href="info.html" onclick="close()" class="bar-item button">INFO</a>
+        <a href="javascript:void(0)" onclick="js_close()" class="bar-item button padding hide-large">js_close</a>
+        <a href="home.html" onclick="js_close()" class="bar-item button">ARTICLES</a>
+        <a href="about.html" onclick="js_close()" class="bar-item button">ABOUT ME</a>
+        <a href="contact.html" onclick="js_close()" class="bar-item button">CONTACT</a>
+        <a href="#" onclick="js_close()" class="bar-item button">SKILLS</a>
+        <a href="pricing.html" onclick="js_close()" class="bar-item button">PRICING</a>
+        <a href="info.html" onclick="js_close()" class="bar-item button">INFO</a>
     </nav>
 
     <!-- For small screens -->
     <header class="container top hide-large white xlarge padding-16">
         <span class="left padding">Bekhruz Tuychiev</span>
-        <a href="javascript:void(0)" class="right button white" onclick="open()">☰</a>
+        <a href="javascript:void(0)" class="right button white" onclick="js_open()">☰</a>
     </header>
 
     <h4 class="padding-16">My skills</h4>
@@ -73,13 +73,13 @@
     </p>
 
     <script>
-        // Open/close sidebar
-        function open() {
+        // js_open/js_close sidebar
+        function js_open() {
             document.getElementById("mySidebar").style.display = "block";
             document.getElementById("myOverlay").style.display = "block";
         }
 
-        function close() {
+        function js_close() {
             document.getElementById("mySidebar").style.display = "none";
             document.getElementById("myOverlay").style.display = "none";
         }
