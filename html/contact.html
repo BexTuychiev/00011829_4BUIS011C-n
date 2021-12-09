@@ -33,18 +33,18 @@
         <div class="content" style="max-width:600px">
             <h4 class="center"><b>Hit Me Up!</b></h4>
             <p>Do you want me cruise through your sea of data and find actionable, business insights? Send me a message with the details and I will get back to you ASAP!</p>
-            <form action="/action_page.php" target="_blank">
+            <form action="/action_page.php" target="_blank" name='contactForm' onsubmit="return validateForm()" method="post">
                 <div class="section">
                     <label>Name</label>
-                    <input class="input border" type="text" name="Name" required>
+                    <input class="input border" type="text" name="Name">
                 </div>
                 <div class="section">
                     <label>Email</label>
-                    <input class="input border" type="text" name="Email" required>
+                    <input class="input border" type="text" name="Email">
                 </div>
                 <div class="section">
                     <label>Share the details below!</label>
-                    <input class="input border" type="text" name="Message" required>
+                    <input class="input border" type="text" name="Message">
                 </div>
                 <button type="submit" class="button block black margin-bottom">Submit</button>
             </form>
@@ -52,6 +52,14 @@
     </div>
 
     <script>
+        function validateName() {
+            let x = document.forms["contactForm"]["Name"].value;
+            if (x == "") {
+                alert("The Name field must be filled out.");
+                return false;
+            }
+        }
+
         // js_open/js_close sidebar
         function js_open() {
             document.getElementById("mySidebar").style.display = "block";
