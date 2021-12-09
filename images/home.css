@@ -540,3 +540,32 @@ a {
 .hover-opacity-off:hover {
     opacity: 1
 }
+
+.small {
+    font-size: 12px!important
+}
+
+.large {
+    font-size: 18px!important
+}
+
+.xlarge {
+    font-size: 24px!important
+}
+
+.justify {
+    text-align: justify!important
+}
+
+.center {
+    text-align: center!important
+}
+
+.border {
+    border: 1px solid #ccc!important
+}
+
+.section {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important
+}
