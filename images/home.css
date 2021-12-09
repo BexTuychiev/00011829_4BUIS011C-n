@@ -531,3 +531,12 @@ a {
         opacity: 1
     }
 }
+
+.opacity,
+.hover-opacity:hover {
+    opacity: 0.60
+}
+
+.hover-opacity-off:hover {
+    opacity: 1
+}
