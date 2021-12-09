@@ -626,3 +626,20 @@ a {
     padding-top: 64px!important;
     padding-bottom: 64px!important
 }
+
+.left {
+    float: left!important
+}
+
+.right {
+    float: right!important
+}
+
+.button:hover {
+    color: #000!important;
+    background-color: #ccc!important
+}
+
+.transparent {
+    background-color: transparent!important
+}
