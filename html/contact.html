@@ -44,7 +44,7 @@
                 </div>
                 <div class="section">
                     <label>Share the details below!</label>
-                    <input class="input border" type="text" name="Message">
+                    <input class="input border" type="text" name="Details">
                 </div>
                 <button type="submit" class="button block black margin-bottom">Submit</button>
             </form>
@@ -52,10 +52,25 @@
     </div>
 
     <script>
-        function validateName() {
-            let x = document.forms["contactForm"]["Name"].value;
-            if (x == "") {
-                alert("The Name field must be filled out.");
+        function validateForm() {
+            // Check if name is blank
+            let name = document.forms["contactForm"]["Name"].value;
+            if (name == "") {
+                alert("The Name field must be filled out!");
+                return false;
+            }
+
+            // Check if email is blank
+            let email = document.forms['contactForm']['Email'].value;
+            if (email == "") {
+                alert("The Email field must be filled out!");
+                return false;
+            }
+
+            // Check if the details field is blank
+            let msgField = document.forms['contactForm']['Details'].value;
+            if (msgField == "") {
+                alert("The Details field must be filled out!");
                 return false;
             }
         }
