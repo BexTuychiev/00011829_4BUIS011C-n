@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW1 For Fundamentals of Web Development</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body>
+    <!--Sidebar-->
+    <nav class="sidebar bar-block white animate-left text-grey collapse top center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="padding-64 center"><b>Bex<br>Tuychiev</b></h3>
+        <a href="javascript:void(0)" onclick="close()" class="bar-item button padding hide-large">CLOSE</a>
+        <a href="#" onclick="close()" class="bar-item button">ARTICLES</a>
+        <a href="about.html" onclick="close()" class="bar-item button">ABOUT ME</a>
+        <a href="#contact" onclick="close()" class="bar-item button">CONTACT</a>
+        <a href="#skills" onclick="close()" class="bar-item button">SKILLS</a>
+        <a href="#pricing" onclick="close()" class="bar-item button">PRICING</a>
+    </nav>
+
+    <!-- For small screens -->
+    <header class="container top hide-large white xlarge padding-16">
+        <span class="left padding">SOME NAME</span>
+        <a href="javascript:void(0)" class="right button white" onclick="open()">☰</a>
+    </header>
+
+    <!-- Overlay-->
+    <div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <!--ADD JS-->
+
+    <div class="main" style="margin-left:300px">
+
+        <!-- For small screens -->
+        <div class="hide-large" style="margin-top:83px"></div>
+
+        <!-- Photo grid -->
+        <div class="row">
+            <div class="third">
+                <img src="images/1.jpeg" style="width:100%" onclick="onClick(this)" alt="6 Pandas Mistakes that Silently Tell You Are a Rookie">
+                <img src="images/2.jpeg" style="width:100%" onclick="onClick(this)" alt="7 Cool Python Packages Kagglers Are Using Without Telling You">
+                <img src="images/3.jpeg" style="width:100%" onclick="onClick(this)" alt="25 Pandas Functions You Didn’t Know Existed | P(Guarantee) = 0.8">
+            </div>
+
+            <div class="third">
+                <img src="images/4.jpeg" style="width:100%" onclick="onClick(this)" alt="Comprehensive Guide to Multiclass Classification Metrics">
+                <img src="images/5.jpeg" style="width:100%" onclick="onClick(this)" alt="10 Advanced Matplotlib Concepts You Must Know To Create Killer Visuals">
+                <img src="images/6.jpeg" style="width:100%" onclick="onClick(this)" alt="Kaggler’s Guide to LightGBM Hyperparameter Tuning with Optuna in 2021">
+            </div>
+
+            <div class="third">
+                <img src="images/7.jpeg" style="width:100%" onclick="onClick(this)" alt="Why Is Everyone at Kaggle Obsessed with Optuna For Hyperparameter Tuning?">
+                <img src="images/8.jpeg" style="width:100%" onclick="onClick(this)" alt="25 NumPy Functions You Never Knew Existed | P (Guarantee = 0.85)">
+                <img src="images/9.jpeg" style="width:100%" onclick="onClick(this)" alt="Beginner’s Guide to XGBoost for Classification Problems">
+            </div>
+        </div>
+
+        <!--What happens when you click on the images-->
+        <div id="modal01" class="modal black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="button black xlarge display-topright">×</span>
+            <div class="modal-content animate-zoom center transparent padding-64">
+                <img id="img01" class="image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        // Open/close sidebar
+        function open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Pop-up effect of images
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+</body>
+
+</html>
