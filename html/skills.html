@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW1 For Fundamentals of Web Development</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+
+<body class="light-grey content" style="max-width:1600px">
+    <!--Sidebar-->
+    <nav class="sidebar bar-block white animate-left text-grey collapse top center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="padding-64 center"><b>Bex<br>Tuychiev</b></h3>
+        <a href="javascript:void(0)" onclick="js_close()" class="bar-item button padding hide-large">Close</a>
+        <a href="home.html" onclick="js_close()" class="bar-item button">ARTICLES</a>
+        <a href="about.html" onclick="js_close()" class="bar-item button">ABOUT ME</a>
+        <a href="contact.html" onclick="js_close()" class="bar-item button">CONTACT</a>
+        <a href="#" onclick="js_close()" class="bar-item button">SKILLS</a>
+        <a href="pricing.html" onclick="js_close()" class="bar-item button">PRICING</a>
+        <a href="info.html" onclick="js_close()" class="bar-item button">INFO</a>
+    </nav>
+
+    <!-- For small screens -->
+    <header class="container top hide-large white xlarge padding-16">
+        <span class="left padding">Bekhruz Tuychiev</span>
+        <a href="javascript:void(0)" class="right button white" onclick="js_open()">☰</a>
+    </header>
+
+    <div class="main" style="margin-left:300px">
+        <div class="container dark-grey center text-light-grey padding-32" id="about">
+            <h4 class="padding-16">My skills</h4>
+            <p class="wide">Python</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:95%">95%</div>
+            </div>
+            <p class="wide">Math and Statistics</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:80%">80%</div>
+            </div>
+            <p class="wide">Machine Learning</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:90%">95%</div>
+            </div>
+            <p class="wide">Data Analysis</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:75%">75%</div>
+            </div>
+
+            <p class="wide">Web Development</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:70%">70%</div>
+            </div>
+
+            <p class="wide">Data Visualization</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:85%">85%</div>
+            </div>
+
+            <p class="wide">Technical Writing</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:96%">96%</div>
+            </div>
+
+            <p class="wide">Data Storytelling</p>
+            <div class="white">
+                <div class="container padding-small center grey" style="width:80%">80%</div>
+            </div>
+
+
+            <p>
+                <a href="files/resume.pdf" download=""><button class="button light-grey padding-large margin-top margin-bottom">Download Resume</button></a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // js_open/js_close sidebar
+        function js_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function js_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Pop-up effect of images
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+</body>
+
+</html>
